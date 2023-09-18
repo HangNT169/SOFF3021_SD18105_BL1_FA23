@@ -8,4 +8,6 @@ public interface SinhVienService {
 
     List<SinhVien>getAll();
 
+    void addSinhVien(SinhVien sv);
+
 }

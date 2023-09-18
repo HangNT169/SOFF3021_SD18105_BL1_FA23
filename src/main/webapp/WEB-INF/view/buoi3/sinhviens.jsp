@@ -12,7 +12,7 @@
         <button type="submit">Search</button>
     </form>
     <br/>
-    <button><a href="">Add Student</a></button>
+    <button><a href="/sinh-vien/view-add">Add Student</a></button>
     <tr>
         <th>STT</th>
         <th>MSSV</th>
@@ -33,6 +33,11 @@
            <td>${sv.tuoi}</td>
            <td>${sv.diaChi}</td>
            <td>${sv.gioiTinh}</td>
+           <td>
+               <button><a href="">Remove</a></button>
+               <button><a href="">Update</a></button>
+               <button><a href="">Detail</a></button>
+           </td>
            </tr>
        </c:forEach>
 

@@ -25,4 +25,9 @@ public class SinhVienServiceImpl implements SinhVienService {
     public List<SinhVien> getAll() {
         return lists;
     }
+
+    @Override
+    public void addSinhVien(SinhVien sv) {
+        lists.add(sv);
+    }
 }
