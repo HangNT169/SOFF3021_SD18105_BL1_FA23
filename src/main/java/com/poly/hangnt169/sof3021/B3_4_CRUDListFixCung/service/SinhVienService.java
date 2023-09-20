@@ -10,4 +10,10 @@ public interface SinhVienService {
 
     void addSinhVien(SinhVien sv);
 
+    void removeSinhVien(String mssv);
+
+    void updateSinhVien(String mssv,SinhVien sv);
+
+    SinhVien detailSinhVien(String mssv);
+
 }
