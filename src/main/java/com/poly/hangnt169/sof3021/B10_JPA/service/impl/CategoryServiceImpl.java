@@ -4,6 +4,9 @@ import com.poly.hangnt169.sof3021.B10_JPA.entity.Category;
 import com.poly.hangnt169.sof3021.B10_JPA.repository.CategoryRepository;
 import com.poly.hangnt169.sof3021.B10_JPA.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,5 +34,12 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public void add(Category category) {
         repo.save(category);
+    }
+
+    @Override
+    public Page<Category> phanTrang(int page, int size) {
+        // Pageable
+        Pageable pageable = PageRequest.of(page, size);
+        return repo.findAll(pageable);
     }
 }
